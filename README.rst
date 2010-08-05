@@ -49,7 +49,6 @@ Author
 ======
 
 Nicolas Chourrout : `website`_
-<nchourrout [at] gmail [dot] com> 
 
 .. _website: http://nchourrout.fr
 
