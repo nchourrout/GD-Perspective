@@ -9,27 +9,32 @@ or by specifying rotations around the x, y and z axis
 Usage
 =====
 
-* Demo::
+Demo::
+
   $p = new Perspective();
   $p->demo();
   $p->display();
 
-* Rotate test.png 45 degrees around z-axis and display the result::
+Rotate test.png 45 degrees around z-axis and display the result::
+
   $p = new Perspective('test.jpg');
   $p->rotate(0,0,M_PI/4);
   $p->display();
 
-* Rotate test.jpg 45 degrees around z-axis and save it as a png file output.png::
+Rotate test.jpg 45 degrees around z-axis and save it as a png file output.png::
+
   $p = new Perspective('test.jpg');
   $p->rotate(0,0,M_PI/4);
   $p->save("output.png");
 
-* Rotate test.jpg 30? and display it as a gif::
+Rotate test.jpg 30? and display it as a gif::
+
   $p = new Perspective('test.jpg');
   $p->rotate(0,0,M_PI/6);
   $p->displayGIF();
 
-* Create a animated gif of test.png spinning around z-axis::
+Create a animated gif of test.png spinning around z-axis::
+
   $p = new Perspective('test.png');
   $p->createAnimatedGIF(); 
 
