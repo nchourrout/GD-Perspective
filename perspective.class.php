@@ -23,17 +23,17 @@
  * 		$p->demo();
  *   	$p->display();
  *		
- * 	- Rotate test.png 45° around z-axis and display the result
+ * 	- Rotate test.png 45ï¿½ around z-axis and display the result
  * 		$p = new Perspective('test.jpg');
  *		$p->rotate(0,0,M_PI/4);
  *		$p->display();
  * 		
- * 	- Rotate test.jpg 45° around z-axis and save it as a png file output.png
+ * 	- Rotate test.jpg 45ï¿½ around z-axis and save it as a png file output.png
  * 		$p = new Perspective('test.jpg');
  * 		$p->rotate(0,0,M_PI/4);
  *		$p->save("output.png");
  *		
- *	- Rotate test.jpg 30° and display it as a gif
+ *	- Rotate test.jpg 30ï¿½ and display it as a gif
  *		$p = new Perspective('test.jpg');
  *		$p->rotate(0,0,M_PI/6);
  *		$p->displayGIF();
@@ -45,11 +45,11 @@
 */
 include "GIFEncoder.class.php";
 /* Todo
-* - Gérer transparence avec les fichiers PNGs
-* - parler dans l'interface avec des icones représentant roll, pitch and yaw instead of x,y,z
-* - Problème aux limites : l'algo n'est pas bon
-* - Time limit à ne pas excéder pour la génération de gifs animés
-* - la transfo perspective autour de l'axe z ressemble à une transformation affine (les côtés opposés restent parallèles)
+* - Gï¿½rer transparence avec les fichiers PNGs
+* - parler dans l'interface avec des icones reprï¿½sentant roll, pitch and yaw instead of x,y,z
+* - Problï¿½me aux limites : l'algo n'est pas bon
+* - Time limit ï¿½ ne pas excï¿½der pour la gï¿½nï¿½ration de gifs animï¿½s
+* - la transfo perspective autour de l'axe z ressemble ï¿½ une transformation affine (les cï¿½tï¿½s opposï¿½s restent parallï¿½les)
 */
 
 class Perspective{
@@ -98,7 +98,7 @@ class Perspective{
 		public function rotate($rx,$ry,$rz){
 			$points = $this->getApexes($rx,$ry,$rz);
 
-			//On doit mieux gérer le fait que l'image résultat ne peut pas être agrandie sous peine d'avoir des zones blanches manquantes
+			//On doit mieux gï¿½rer le fait que l'image rï¿½sultat ne peut pas ï¿½tre agrandie sous peine d'avoir des zones blanches manquantes
 			$ratio = 2;
 			if ($rx!=0 || $ry!=0 || $rz!=0)
 				for($i=0;$i<count($points);$i++)
@@ -178,7 +178,7 @@ class Perspective{
 				Header ( 'Content-type:image/gif' );
 				imagegif($this->img);
 			}else
-				imagegif($img,$outputName);
+				imagegif($this->img,$outputName);
 		}
 		
 		public function save($outputName=null){
