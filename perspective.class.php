@@ -45,11 +45,11 @@
 */
 include "GIFEncoder.class.php";
 /* Todo
-* - G�rer transparence avec les fichiers PNGs
-* - parler dans l'interface avec des icones repr�sentant roll, pitch and yaw instead of x,y,z
-* - Probl�me aux limites : l'algo n'est pas bon
-* - Time limit � ne pas exc�der pour la g�n�ration de gifs anim�s
-* - la transfo perspective autour de l'axe z ressemble � une transformation affine (les c�t�s oppos�s restent parall�les)
+* - Gérer transparence avec les fichiers PNGs
+* - parler dans l'interface avec des icones représentant roll, pitch and yaw instead of x,y,z
+* - Problème aux limites : l'algo n'est pas bon
+* - Time limit à ne pas excéder pour la génération de gifs animés
+* - la transfo perspective autour de l'axe z ressemble à une transformation affine (les côtés opposés restent parallèles)
 */
 
 class Perspective{
@@ -98,7 +98,7 @@ class Perspective{
 		public function rotate($rx,$ry,$rz){
 			$points = $this->getApexes($rx,$ry,$rz);
 
-			//On doit mieux g�rer le fait que l'image r�sultat ne peut pas �tre agrandie sous peine d'avoir des zones blanches manquantes
+			//On doit mieux gérer le fait que l'image résultat ne peut pas être agrandie sous peine d'avoir des zones blanches manquantes
 			$ratio = 2;
 			if ($rx!=0 || $ry!=0 || $rz!=0)
 				for($i=0;$i<count($points);$i++)
