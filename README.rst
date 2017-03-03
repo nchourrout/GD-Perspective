@@ -50,7 +50,7 @@ Author
 
 Nicolas Chourrout : `website`_
 
-.. _website: http://nchourrout.fr
+.. _website: http://chourrout.com
 
 
 More information
